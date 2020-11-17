@@ -1,0 +1,143 @@
+<head>
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>Pedestrian360</title>
+
+<style>
+<!--
+div.Section1
+	{page:Section1;}
+ table.MsoNormalTable
+	{mso-style-parent:"";
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif"}
+table.TableGrid
+	{border:1.0pt solid black;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	}
+-->
+</style>
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>Pedestrian360</title>
+
+<style>
+<!--
+div.Section1
+	{page:Section1;}
+ table.MsoNormalTable
+	{mso-style-parent:"";
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif"}
+table.TableGrid
+	{border:1.0pt solid black;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	}
+-->
+</style>
+</head>
+
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns="http://www.w3.org/TR/REC-html40">
+
+<body>
+
+<table class="MsoNormalTable" border="0" cellpadding="0" width="1217" id="table3" height="35">
+	<tr>
+		<td valign="top" style="width: 1211px; height: 31px; padding: .75pt" align="left">
+		<p class="text">
+		<span lang="en-us"><font face="Calibri" size="5" color="#0000FF">
+		<b>Pedestrian-Aware Panoramic Video Stitching Based on a Structured Camera Array</b></font></span><p class="text">
+		<span lang="en-us"><font face="Calibri" size="4" color="#0000FF">
+		Anqi Zhu<sup>1</sup>,&nbsp;Lin Zhang*</font></span><font face="Calibri" size="4" color="#0000FF"><sup>1</sup><span lang="en-us">, 
+		Juntao Chen</span><sup>1</sup><span lang="en-us">,
+		Shengjie Zhao</span><sup>1</sup><span lang="en-us">, 
+		Yicong Zhou</span><sup>2</sup></font>
+		
+		<p class="text">
+		<span lang="en-us"><font face="Calibri" size="4" color="#0000FF">
+		<sup>1</sup>
+		School of Software Engineering, Tongji University, Shanghai, China</font></span>
+
+		<p class="text">
+		<span lang="en-us"><font face="Calibri" size="4" color="#0000FF">
+		<sup>2</sup>
+		Department of Computer and Information Science, University of Macau, China</font></span>
+
+	</font></td>
+	</tr>
+	</table>
+<hr>
+<p><span lang="en-us"><b><font face="Calibri" size="5">Introduction</font></b></span></p>
+<p>
+<span style="font-size: 13pt; font-family: Calibri; color: windowtext" lang="EN-US">
+This is the website for our paper &quot;Pedestrian-Aware Panoramic Video Stitching Based on a Structured Camera Array<span style="color: #000000"></span></a>&quot;</span>.</p>
+
+<hr>
+<p><span lang="en-us"><b><font face="Calibri" size="5">Abstract</font></b></span></p>
+<p> 
+<span lang="en-us"><font face="Calibri" style="font-size: 13pt"> 
+<a>A panorama stitching system can help the viewer understand the surrounding environment in surveillance or space exploration.
+Such a system that aligns the surrounding images on a plane and fuses them naturally is necessarily called for.
+ We solve three key issues in the existing workflow that can affect the efficiency and the quality of the obtained panoramic video and present Pedestrian360, a real-time panoramic video system based on a structured camera array.
+ First, to get a geometrically aligned 360 degree view in the horizontal direction, we build a unified multi-camera coordinate system via a novel refinement approach that jointly optimizes camera poses.
+ Second, to eliminate the brightness and color difference of images taken by different cameras, we design a photometric alignment approach by adding a bias to the traditional linear adjustment model and solving it with two-step least-squares.
+ Third, considering that the HVS(Human Visual System) is more sensitive to high-level semantic objects, such as pedestrians and vehicles, we integrate the results of instance segmentation into the dynamic programming in the seam-cutting step. 
+To our knowledge, we are the first to introduce instance segmentation to the seam-cutting problem. 
+ This can ensure the integrity of the salient objects in a panorama. 
+ In our surveillance oriented system, we choose the most significant target, pedestrians, as the seam avoidance target, and this is the reason for the name Pedestrian360.
+We demonstrate that Pedestrian360 performs better and have real-time performance compared to existing methods through various scenes and resolutions tests.  </a></font></span></p>
+<hr>
+
+<p><span lang="en-us"><b><font face="Calibri" size="5">Appearance and Workflow</font></b></span></p>
+<p> 
+<span lang="en-us"><font face="Calibri" style="font-size: 13pt"> 
+<a>
+Our Pedestrian360 panorama system is based on a structured camera array, which consists of four wide-angle, small-sized 1080P cameras. Its appearance and detailed internal structure are shown in the figure below. Four fisheye cameras are mounted on a column in four directions. Each camera has 180 degree field-of-view. Adjacent cameras share some overlapped areas and four fisheye cameras together cover the whole surrounding area of the column.
+</a></font></span></p>
+<img src="./appearance.png" height="300"></img>
+
+<p> 
+<span lang="en-us"><font face="Calibri" style="font-size: 13pt"> 
+<a>
+The workflow of Pedestrian360 consists of three steps: calibration, cylindrical projection with photometric alignment, and seam updating. The pipeline is shown in the figure below.
+</a></font></span></p>
+<img src="./pipeline.png" height="300"></img>
+
+<hr>
+
+
+<p><span lang="en-us"><b><font face="Calibri" size="5">Source Codes and Data</font></b></span></p>
+<p>
+<span lang="en-us"><font face="Calibri" style="font-size: 13pt"> 
+<a href="https://github.com/aaaaangel/Pedestrian360">Get the code and data. </a></font></span></p>
+
+<hr>
+
+<p> 
+<span lang="en-us"><font face="Calibri" style="font-size: 13pt"> 
+<a>
+Here are some image stitching examples of Pedestrian360:
+</a></font></span></p>
+<img src="./images.png" height="300"></img>
+
+<p> 
+<span lang="en-us"><font face="Calibri" style="font-size: 13pt"> 
+<a>
+Here are video examples of Pedestrian360:
+</a></font></span></p>
+<video height="300" controls="controls">
+  <source src="video1.mp4" type="video/mp4" />
+  </object>
+</video>
+<video height="300" controls="controls">
+  <source src="video2.mp4" type="video/mp4" />
+  </object>
+</video>
+
+<hr>
+<p align="justify"><font face="Calibri">Last update: <span lang="en-us">Nov. 17,
+</span>202<span lang="en-us">0</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></p>
+</body>
+</html>
